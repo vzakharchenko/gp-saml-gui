@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 echo "Prepare vpn..."
 sudo apt-get -y install python3 python3-gi gir1.2-gtk-3.0 gir1.2-webkit2-4.0 python3-pip libcanberra-gtk-module libcanberra-gtk3-module
@@ -22,10 +23,10 @@ sudo make
 sudo make install
 sudo ldconfig
 
-
-#!/bin/bash
-
 for user  in `users`
 do
- sudo su user -c "curl -J -L "
+ sudo su $user -c "mkdir -p ~/.gnome/apps"
+ sudo su $user -c "curl -J -L https://raw.githubusercontent.com/vzakharchenko/gp-saml-gui/master/scripts/menu/menulibre-globalprotect.desktop --output ~/.gnome/apps/menulibre-globalprotect.desktop"
+ sudo su $user -c "curl -J -L https://raw.githubusercontent.com/vzakharchenko/gp-saml-gui/master/scripts/menu/menulibre-disconnect-globalprotect.desktop --output ~/.gnome/apps/menulibre-disconnect-globalprotect.desktop"
+ sudo su $user -c "curl -J -L https://raw.githubusercontent.com/vzakharchenko/gp-saml-gui/master/scripts/menu/menulibre-connect-globalprotect.desktop --output ~/.gnome/apps/menulibre-connect-globalprotect.desktop"
 done
