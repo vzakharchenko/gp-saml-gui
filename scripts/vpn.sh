@@ -44,6 +44,7 @@ if [[ "x${VPN_URL}" = "x" ]]; then
 fi
 cd /opt/gp-saml-gui/scripts
 set +e
+sudo killall -SIGINT openconnect
 ./login.sh
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
