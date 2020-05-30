@@ -42,8 +42,36 @@ mvpn
 ```shell script
 dvpn
 ```
-TODO
-====
+# Current status
+```
+mvpn-status
+```
+### Result
+**Connected:**
+```
+GP Connected
+```
+**disconnected:**
+```
+-
+```
+# Integrate Status with Mate Desktop(Ubuntu Mate, Mint)
+
+- right click on panel
+- Add to Panel...
+- add command  
+  ![addtoPanel](img/addtoPanel.png)
+![panel](img/panel.png)
+- right click -> preferences  
+![mvpnstatus](img/mvpnstatus.png)  
+**command:** mvpn-status
+### Result
+**Connected:**  
+![connected](img/connected.png)
+**Disconnected:**  
+![disconnected](img/disconnected.png)
+# TODO
+=====
 
 * Packaging
 

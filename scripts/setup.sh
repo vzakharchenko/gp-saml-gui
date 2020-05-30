@@ -9,8 +9,10 @@ sudo git clone https://github.com/vzakharchenko/gp-saml-gui.git /opt/gp-saml-gui
 sudo chmod -R 777 /opt/gp-saml-gui/scripts
 sudo rm -f /usr/local/bin/mvpn
 sudo rm -f /usr/local/bin/dvpn
+sudo rm -f /usr/local/bin/mvpn-status
 sudo ln -s  /opt/gp-saml-gui/scripts/vpn.sh /usr/local/bin/mvpn
 sudo ln -s  /opt/gp-saml-gui/scripts/disconnectVPN.sh /usr/local/bin/dvpn
+sudo ln -s  /opt/gp-saml-gui/scripts/mvpn-status.sh /usr/local/bin/mvpn-status
 
 echo "install OpenConnect ..."
 sudo apt-get install -y build-essential gettext autoconf automake libproxy-dev libxml2-dev libtool vpnc-scripts pkg-config libgnutls28-dev
