@@ -67,7 +67,7 @@ GP Connected
 **command:** mvpn-status
 ### Result
 **Connected:**  
-![connected](img/connected.png)
+![connected](img/connected.png)  
 **Disconnected:**  
 ![disconnected](img/disconnected.png)
 # TODO
